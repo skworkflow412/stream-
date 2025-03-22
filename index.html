@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live IPL Streaming</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Live IPL Streaming</h1>
+      <ul>
+        <li><a href="#live-stream">Live Stream</a></li>
+        <li><a href="#schedule">Match Schedule</a></li>
+        <li><a href="#live-score">Live Score</a></li>
+        <li><a href="#ads">Ads</a></li>
+        <li><button id="theme-toggle">Dark Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Live Stream Section -->
+    <section id="live-stream">
+      <h2>Watch IPL Live</h2>
+      <video id="ipl-video" controls autoplay>
+        <source src="YOUR_STREAM_URL_HERE" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Match Schedule -->
+    <section id="schedule">
+      <h2>Match Schedule</h2>
+      <div id="match-schedule">
+        <!-- Schedule will be dynamically fetched -->
+        <p>Loading match schedule...</p>
+      </div>
+    </section>
+
+    <!-- Live Score -->
+    <section id="live-score">
+      <h2>Live Score</h2>
+      <div id="score-widget">
+        <!-- Live score widget will load here -->
+        <p>Fetching live scores...</p>
+      </div>
+    </section>
+
+    <!-- Ads Section -->
+    <section id="ads">
+      <h2>Sponsored Ads</h2>
+      <div class="ad-container">
+        <div class="ad" id="ad-1">Your Ad Here</div>
+        <div class="ad" id="ad-2">Your Ad Here</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Live IPL Streaming. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
