@@ -1,0 +1,15 @@
+{
+  "name": "live-ipl-streaming",
+  "version": "1.0.0",
+  "description": "A live IPL streaming website with Node.js backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["IPL", "live-streaming", "cricket"],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
