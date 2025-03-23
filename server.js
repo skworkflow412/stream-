@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 let matches = [];
 
 // Cricket API setup
-const API_KEY = "YOUR_CRICAPI_KEY";
+const API_KEY = "93df2fee-bd47-4a33-a578-6ec9f2415f62";
 const CRICKET_API_URL = "https://api.cricapi.com/v1/currentMatches";
 
 // Middleware
