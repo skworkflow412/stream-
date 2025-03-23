@@ -1,36 +1,12 @@
-// Dark Mode Toggle
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
-
-// Fetch Match Schedule
-const matchSchedule = document.getElementById("match-schedule");
-fetch("/api/schedule")
-  .then(response => response.json())
-  .then(data => {
-    matchSchedule.innerHTML = data.map(match => `
-      <div>
+fetch("/api/matches")
+  .then(res => res.json())
+  .then(matches => {
+    const matchList = document.getElementById("match-list");
+    matchList.innerHTML = matches.map(match => `
+      <div class="match">
         <h3>${match.teams}</h3>
-        <p>${match.date} - ${match.time}</p>
+        <p>Live Score: ${match.liveScore || "Not Available"}</p>
+        ${match.streamingLink ? `<a href="${match.streamingLink}" target="_blank">Watch Live</a>` : ""}
       </div>
     `).join("");
-  })
-  .catch(err => {
-    matchSchedule.innerHTML = "<p>Failed to load match schedule.</p>";
-  });
-
-// Fetch Live Scores
-const scoreWidget = document.getElementById("score-widget");
-fetch("/api/live-score")
-  .then(response => response.json())
-  .then(data => {
-    scoreWidget.innerHTML = `
-      <h3>${data.match}</h3>
-      <p>Score: ${data.score}</p>
-      <p>Overs: ${data.overs}</p>
-    `;
-  })
-  .catch(err => {
-    scoreWidget.innerHTML = "<p>Failed to fetch live scores.</p>";
   });
